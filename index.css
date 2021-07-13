@@ -1,30 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
 
 .main-container{
+    align-items: center;
+    justify-content: center;
     display: flex;
     position: relative;
-    width: min-content;
+    width: 80vw;
+    height: 70vh;
     background-color: hsl(233, 47%, 7%);
     text-align: center;
-    padding: 5%;
+    padding: 10%;
 
 }
 
 .details-holder{
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 50%;
-    padding: 5%;
+    height:100%;
     border-radius: 2% 0 0 2% ;
     background-color: hsl(244, 38%, 16%);
 }
 
 .details-holder header{
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: larger;
+    font-family: 'LexeSnd Deca', sans-serif;
+    font-size:2.5rem;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    margin-top: 2%;
 }
 
 .details-holder header mark{
@@ -32,18 +37,28 @@
     background-color: hsl(244, 38%, 16%);;
 }
 
-.details-holder summary{
+.summary{
     font-family:'Inter', sans-serif;
-    text-align: left;
-    font-size: 15px;
-    font-weight: 400 ;
+    text-align:start;
+    font-size: 1.5rem;
+    font-weight:300;
+    height: max-content;
+    width:95%;
     color:hsla(0, 0%, 100%, 0.75);
+    padding: 5%;
 }
 
 .figures-card{
     display: flex;
+    /* align-items: center; */
+    /* align-content: center; */
+    position: relative;
     font-family:'Inter', sans-serif;
-    margin-top: 50%;
+    font-size: 1rem;
+    height: min-content;
+    width:95%;
+    margin-left: 5%;
+    margin-bottom: 10%;
 }
 
 .figure small{
@@ -52,67 +67,54 @@
 
 .figure figure{
    color: hsl(0, 0%, 100%);  
+   font-size:larger;
 }
 
 .picture-card{
-    background-color:hsl(277, 64%, 61%) ;
-    width: 659px;
-    height: 484px;
-    overflow: hidden;
-    border-radius: 0 2% 2% 0 ;
-}
-
-.picture-card img{
-    filter: opacity(20%);
+    background-image: url(./images/image-header-desktop.jpg);
+    background-color:hsl(277, 64%, 61%);
+    background-blend-mode:soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
     height: 100%;
-    overflow:hidden;
+    border-radius: 0 2% 2% 0;
+    position: relative;
 }
 
-@media only screen and (max-width: 375px) {
-
-        .main-container{
+@media only screen and (max-width: 860px) {
+    .main-container{
         display: flex;
-        flex-direction:column-reverse;
-        position: relative;
-        width:fit-content;
-        background-color: hsl(233, 47%, 7%);
-        text-align: center;
-        padding: 5%;
-        }
-
-        .details-holder{
-        width: auto;
-        padding: 5%;
-        background-color: hsl(244, 38%, 16%);
-        border-radius:  0 0 2% 2% ;   
-        }
-
-        .picture-card{
-            position: relative;
-        background-color:hsl(277, 64%, 61%);
-        width: 654px;
-        height: 480px;
-        overflow: hidden;
-        border-radius: 2% 2% 0 0;   
-        }
-
-        .picture-card img{
-        filter: opacity(20%);
-        width:fit-content;
+        flex-direction: column-reverse;
         height: min-content;
-        }
+    }
 
-        .details-holder summary{
-        font-family:'Inter', sans-serif;
+    .details-holder{
+        position: relative;
+        width: 100%;
+        height: 50%;
+        border-radius: 0 0 2% 2%;
         text-align: center;
-        }
+    }
 
-        .figures-card{
-        display: flex;
-        flex-direction: column;
-        font-family:'Inter', sans-serif;
-        margin-top: 50%;
+    .summary{
+        text-align: center;
+        font-size:larger;
+    } 
+
+    .picture-card{
+        background-image: url(./images/image-header-mobile.jpg);
+        width: 100%;
+        height: 50vh;
+        border-radius: 2% 2% 0 0;
     }
     
+    .figures-card{
+        display: flex;
+        flex-direction: column;
+        /* margin-left:30%; */
+        margin-bottom: 3%;
+        font-size:1.5rem;
+    }
 }
 
